@@ -23,6 +23,11 @@ body {
   justify-content: space-evenly;
 
   margin-top: 100px;
+
+  animation-name: rotate;
+  animation-duration: 800ms;
+  animation-direction: normal;
+  animation-iteration-count: infinite;
 }
 
 .dot {
@@ -50,4 +55,14 @@ body {
   height: 80px;
 
   background-color: #fff;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(180deg);
+  }
 }
