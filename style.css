@@ -7,7 +7,7 @@
 body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
 
   height: 100vh;
 
@@ -47,14 +47,36 @@ body {
   justify-content: center;
 
   gap: 15px;
-  margin-top: 200px;
+  /* margin-top: 200px; */
 }
 
 .loading-bar__bar {
   width: 20px;
-  height: 80px;
+  height: 70px;
 
   background-color: #fff;
+
+  animation: stairs 1.3s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+
+.bar--1 {
+  animation-delay: -1s;
+}
+
+.bar--2 {
+  animation-delay: -0.86s;
+}
+
+.bar--3 {
+  animation-delay: -0.48s;
+}
+
+.bar--4 {
+  animation-delay: -0.24s;
+}
+
+.bar--5 {
+  animation-delay: -0.12s;
 }
 
 @keyframes rotate {
@@ -64,5 +86,17 @@ body {
 
   100% {
     transform: rotate(180deg);
+  }
+}
+
+@keyframes stairs {
+  0% {
+    transform: scaleY(1.8);
+  }
+  50% {
+    transform: scaleY(1.4);
+  }
+  100% {
+    transform: scaleY(1);
   }
 }
